@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kutai Kartanegara</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Playfair+Display&display=swap" rel="stylesheet">
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #DCE5C1;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #6F7F5F;
+  padding: 12px;
+  position: relative;
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.menu a {
+  color: #F5F5DC;
+  margin: 5px;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+}
+
+.menu a:hover {
+  background: #556B4F;
+}
+
+.menu a.active {
+  background: #DCE5C1;
+  color: #2F3E2C;
+}
+
+.hamburger {
+  position: absolute;
+  left: 15px;
+  font-size: 26px;
+  color: #F5F5DC;
+  cursor: pointer;
+  display: none;
+}
+
+.hero {
+  height: 80vh;
+  background: url('https://image2url.com/r2/default/images/1775290716653-4a7859e3-6d6e-435c-8c1b-00038ce49dea.png') center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-box {
+  background: linear-gradient(rgba(232,240,216,0.6), rgba(111,127,95,0.6));
+  padding: 30px;
+  border-radius: 15px;
+  color: white;
+  text-align: center;
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 2px;
+  font-size: 44px;
+  margin: 0;
+}
+
+.section {
+  padding: 40px;
+  text-align: center;
+  background-color: #E8F0D8;
+  border-radius: 15px;
+  margin-bottom: 30px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.card {
+  width: 220px;
+  border-radius: 15px;
+  overflow: hidden;
+  text-decoration: none;
+  color: black;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: 0.3s;
+  position: relative;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img, .card video {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  display: block;
+  border-radius: 15px;
+}
+
+.video-card {
+  width: 600px;
+}
+
+.video-card video {
+  height: 300px;
+}
+
+.card p {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  margin: 0;
+  padding: 10px;
+  font-weight: 500;
+  color: white;
+  background: linear-gradient(to top, rgba(111,127,95,0.8), rgba(232,240,216,0));
+  text-align: center;
+  box-sizing: border-box;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+}
+
+@media (min-width: 769px) {
+  .menu {
+    display: flex !important;
+    position: static;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .hamburger {
+    display: block;
+  }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: #6F7F5F;
+    position: absolute;
+    top: 60px;
+    left: 0;
+  }
+
+  .menu a {
+    text-align: center;
+    padding: 12px;
+    border-top: 1px solid rgba(255,255,255,0.2);
+  }
+
+  .menu.show {
+    display: flex;
+  }
+
+  .video-card {
+    width: 100%;
+  }
+
+  .card {
+    width: 90%;
+  }
+
+  .card img {
+    height: 180px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="navbar">
+  <div class="hamburger" onclick="toggleMenu()">☰</div>
+
+  <div class="menu" id="menu">
+    <a href="index.html" class="active">Home</a>
+    <a href="wisata.html">Wisata</a>
+    <a href="aktivitas.html">Aktivitas</a>
+    <a href="budaya.html">Budaya</a>
+    <a href="kuliner.html">Kuliner</a>
+    <a href="hotel.html">Akomodasi</a>
+    <a href="transportasi.html">Transportasi</a>
+    <a href="peta.html">Peta</a>
+    <a href="tiket.html">Tiket</a>
+    <a href="tentang.html">Tentang</a>
+    <a href="galeri.html">Galeri</a>
+  </div>
+</div>
+
+<div class="hero">
+  <div class="hero-box">
+    <h1>Kutai Kartanegara</h1>
+    <p class="tagline">Website Informasi Wisata Lengkap</p>
+  </div>
+</div>
+
+<div class="section">
+  <div class="container">
+    <div class="card video-card">
+      <video controls>
+        <source src="https://image2url.com/r2/default/videos/1775293048354-d03f0a06-95a5-4f58-88b4-f09f887fbe3c.mp4" type="video/mp4">
+      </video>
+      <p>Video Cinematic</p>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="container">
+    <a href="wisata.html" class="card"><img src="https://cdn.phototourl.com/free/2026-04-04-951a8b2c-b02c-45a8-80f8-8b8beaf6b66e.jpg"><p>Wisata</p></a>
+    <a href="aktivitas.html" class="card"><img src="https://cdn.phototourl.com/free/2026-04-04-cf5995d1-8b2d-419b-87d6-5954ad23d050.jpg"><p>Aktivitas</p></a>
+    <a href="budaya.html" class="card"><img src="https://cdn.phototourl.com/free/2026-04-04-9f076990-123f-40b9-bba3-6fe5f643b182.jpg"><p>Budaya</p></a>
+    <a href="kuliner.html" class="card"><img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?crop=entropy&cs=tinysrgb&fit=max&h=140&w=220"><p>Kuliner</p></a>
+    <a href="hotel.html" class="card"><img src="https://www.image2url.com/r2/default/images/1776166891707-27ad3f92-49f6-4067-8e5d-f13a694a7d8d.jpg"><p>Akomodasi</p></a>
+    <a href="transportasi.html" class="card"><img src="https://cdn.phototourl.com/free/2026-04-04-cd3db40a-e2cf-49fc-be5d-adeaf76cdf4d.jpg"><p>Transportasi</p></a>
+    <a href="peta.html" class="card"><img src="https://cdn.phototourl.com/free/2026-04-04-128db6dd-443a-428a-9081-f01bcaf40490.jpg"><p>Peta</p></a>
+    <a href="tiket.html" class="card"><img src="https://cdn.phototourl.com/free/2026-04-04-a3213933-394b-4a72-a6a4-6aac0946c60b.jpg"><p>Tiket</p></a>
+    <a href="tentang.html" class="card"><img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?crop=entropy&cs=tinysrgb&fit=max&h=140&w=220"><p>Tentang</p></a>
+    <a href="galeri.html" class="card"><img src="https://cdn.phototourl.com/free/2026-04-04-0ff867b3-f45f-43a7-86bf-3b72e774c1d2.jpg"><p>Galeri</p></a>
+  </div>
+</div>
+
+<script>
+function toggleMenu() {
+  document.getElementById("menu").classList.toggle("show");
+}
+</script>
+
+</body>
+</html>

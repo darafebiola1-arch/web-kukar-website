@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Budaya Kutai Kartanegara</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Playfair+Display&display=swap" rel="stylesheet">
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #DCE5C1;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #6F7F5F;
+  padding: 12px;
+  position: relative;
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.menu a {
+  color: #F5F5DC;
+  margin: 5px;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+}
+
+.menu a:hover {
+  background: #556B4F;
+}
+
+.menu a.active {
+  background: #DCE5C1;
+  color: #2F3E2C;
+}
+
+.hamburger {
+  position: absolute;
+  left: 15px;
+  font-size: 26px;
+  color: #F5F5DC;
+  cursor: pointer;
+  display: none;
+}
+
+.section {
+  padding: 30px;
+}
+
+.budaya-box {
+  margin-bottom: 40px;
+}
+
+.budaya-box img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.budaya-text {
+  margin-top: 10px;
+}
+
+.budaya-text h2 {
+  margin: 5px 0;
+  font-family: 'Playfair Display', serif;
+  color: #2F3E2C;
+}
+
+.budaya-text p {
+  margin: 0;
+  color: #444;
+}
+
+@media (min-width: 769px) {
+  .menu {
+    display: flex !important;
+    position: static;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .hamburger {
+    display: block;
+  }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: #6F7F5F;
+    position: absolute;
+    top: 60px;
+    left: 0;
+  }
+
+  .menu a {
+    text-align: center;
+    padding: 12px;
+    border-top: 1px solid rgba(255,255,255,0.2);
+  }
+
+  .menu.show {
+    display: flex;
+  }
+
+  .budaya-box img {
+    height: 200px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="navbar">
+  <div class="hamburger" onclick="toggleMenu()">☰</div>
+
+  <div class="menu" id="menu">
+    <a href="index.html">Home</a>
+    <a href="wisata.html">Wisata</a>
+    <a href="aktivitas.html">Aktivitas</a>
+    <a href="budaya.html" class="active">Budaya</a>
+    <a href="kuliner.html">Kuliner</a>
+    <a href="hotel.html">Akomodasi</a>
+    <a href="transportasi.html">Transportasi</a>
+    <a href="peta.html">Peta</a>
+    <a href="tiket.html">Tiket</a>
+    <a href="tentang.html">Tentang</a>
+    <a href="galeri.html">Galeri</a>
+  </div>
+</div>
+
+<div class="section">
+
+  <div class="budaya-box">
+    <img src="https://cdn.phototourl.com/free/2026-04-04-19da5692-8284-4ced-ba70-a7fc9f5aa954.jpg">
+    <div class="budaya-text">
+      <h2>Festival Erau</h2>
+      <p>Festival budaya terbesar di Kutai Kartanegara yang menampilkan berbagai tradisi, seni, dan upacara adat.</p>
+    </div>
+  </div>
+
+</div>
+
+<script>
+function toggleMenu() {
+  document.getElementById("menu").classList.toggle("show");
+}
+</script>
+
+</body>
+</html>

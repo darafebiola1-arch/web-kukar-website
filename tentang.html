@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tentang Kutai Kartanegara</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Playfair+Display&display=swap" rel="stylesheet">
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #DCE5C1;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #6F7F5F;
+  padding: 12px;
+  position: relative;
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.menu a {
+  color: #F5F5DC;
+  margin: 5px;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+}
+
+.menu a.active {
+  background: #DCE5C1;
+  color: #2F3E2C;
+}
+
+.hamburger {
+  position: absolute;
+  left: 15px;
+  font-size: 26px;
+  color: #F5F5DC;
+  cursor: pointer;
+  display: none;
+}
+
+.section {
+  padding: 40px;
+  text-align: center;
+}
+
+.box {
+  max-width: 700px;
+  margin: auto;
+  background: #E8F0D8;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* TITLE */
+h1 {
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 20px;
+}
+
+p {
+  line-height: 1.6;
+  color: #2F3E2C;
+}
+
+@media (min-width: 769px) {
+  .menu {
+    display: flex !important;
+    position: static;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .hamburger {
+    display: block;
+  }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: #6F7F5F;
+    position: absolute;
+    top: 60px;
+    left: 0;
+  }
+
+  .menu a {
+    text-align: center;
+    padding: 12px;
+    border-top: 1px solid rgba(255,255,255,0.2);
+  }
+
+  .menu.show {
+    display: flex;
+  }
+
+  .section {
+    padding: 20px;
+  }
+
+  .box {
+    width: 90%;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="navbar">
+  <div class="hamburger" onclick="toggleMenu()">☰</div>
+
+  <div class="menu" id="menu">
+    <a href="index.html">Home</a>
+    <a href="wisata.html">Wisata</a>
+    <a href="aktivitas.html">Aktivitas</a>
+    <a href="budaya.html">Budaya</a>
+    <a href="kuliner.html">Kuliner</a>
+    <a href="hotel.html">Akomodasi</a>
+    <a href="transportasi.html">Transportasi</a>
+    <a href="peta.html">Peta</a>
+    <a href="tiket.html">Tiket</a>
+    <a href="tentang.html" class="active">Tentang</a>
+    <a href="galeri.html">Galeri</a>
+  </div>
+</div>
+
+<div class="section">
+
+  <div class="box">
+    <h1>Kutai Kartanegara</h1>
+
+    <p>
+      Kutai Kartanegara merupakan salah satu kabupaten yang terletak di Provinsi Kalimantan Timur. 
+      Daerah ini dikenal sebagai salah satu wilayah dengan sejarah kerajaan tertua di Indonesia, yaitu Kerajaan Kutai.
+    </p>
+
+    <p>
+      Selain kaya akan sejarah, Kutai Kartanegara juga memiliki berbagai destinasi wisata menarik seperti 
+      pantai, pulau, dan tempat wisata budaya. Keindahan alam yang masih asri menjadikan daerah ini 
+      sebagai tujuan wisata yang menarik untuk dikunjungi.
+    </p>
+
+    <p>
+      Tidak hanya itu, masyarakat Kutai Kartanegara juga memiliki budaya yang unik dan beragam, 
+      serta kuliner khas yang menggugah selera. Semua hal tersebut menjadikan Kutai Kartanegara 
+      sebagai destinasi wisata yang lengkap dan berkesan.
+    </p>
+
+  </div>
+
+</div>
+
+<script>
+function toggleMenu() {
+  document.getElementById("menu").classList.toggle("show");
+}
+</script>
+
+</body>
+</html>

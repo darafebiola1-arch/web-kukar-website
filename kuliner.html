@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kuliner Kutai Kartanegara</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Playfair+Display&display=swap" rel="stylesheet">
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #DCE5C1;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #6F7F5F;
+  padding: 12px;
+  position: relative;
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.menu a {
+  color: #F5F5DC;
+  margin: 5px;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+}
+
+.menu a:hover {
+  background: #556B4F;
+}
+
+.menu a.active {
+  background: #DCE5C1;
+  color: #2F3E2C;
+}
+
+/* HAMBURGER */
+.hamburger {
+  position: absolute;
+  left: 15px;
+  font-size: 26px;
+  color: #F5F5DC;
+  cursor: pointer;
+  display: none;
+}
+
+/* CONTENT */
+.section {
+  padding: 30px;
+}
+
+.kuliner-box {
+  margin-bottom: 40px;
+}
+
+.kuliner-box img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.kuliner-text {
+  margin-top: 10px;
+}
+
+.kuliner-text h2 {
+  margin: 5px 0;
+  font-family: 'Playfair Display', serif;
+  color: #2F3E2C;
+}
+
+.kuliner-text p {
+  margin: 0;
+  color: #444;
+}
+
+/* FIX LAPTOP */
+@media (min-width: 769px) {
+  .menu {
+    display: flex !important;
+    position: static;
+  }
+}
+
+/* RESPONSIVE HP */
+@media (max-width: 768px) {
+
+  .hamburger {
+    display: block;
+  }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: #6F7F5F;
+    position: absolute;
+    top: 60px;
+    left: 0;
+  }
+
+  .menu a {
+    text-align: center;
+    padding: 12px;
+    border-top: 1px solid rgba(255,255,255,0.2);
+  }
+
+  .menu.show {
+    display: flex;
+  }
+
+  .kuliner-box img {
+    height: 200px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+  <div class="hamburger" onclick="toggleMenu()">☰</div>
+
+  <div class="menu" id="menu">
+    <a href="index.html">Home</a>
+    <a href="wisata.html">Wisata</a>
+    <a href="aktivitas.html">Aktivitas</a>
+    <a href="budaya.html">Budaya</a>
+    <a href="kuliner.html" class="active">Kuliner</a>
+    <a href="hotel.html">Akomodasi</a>
+    <a href="transportasi.html">Transportasi</a>
+    <a href="peta.html">Peta</a>
+    <a href="tiket.html">Tiket</a>
+    <a href="tentang.html">Tentang</a>
+    <a href="galeri.html">Galeri</a>
+  </div>
+</div>
+
+<!-- CONTENT -->
+<div class="section">
+
+  <div class="kuliner-box">
+    <img src="https://lh3.googleusercontent.com/d/1UshZQStU2oPKBS5Ql771Hn2NUetkv88a">
+    <div class="kuliner-text">
+      <h2>Sayur Asam Gangan</h2>
+      <p>Sayur khas Kutai dengan kuah asam segar yang dipadukan dengan berbagai sayuran lokal dan ikan.</p>
+    </div>
+  </div>
+
+  <div class="kuliner-box">
+    <img src="https://image2url.com/r2/default/images/1775296221745-d549b5bf-93d2-40e9-b99a-b61afbd5265b.jpg">
+    <div class="kuliner-text">
+      <h2>Gence Ruan</h2>
+      <p>Olahan ikan gabus khas Kutai yang dimasak dengan bumbu pedas manis dan dibakar hingga harum.</p>
+    </div>
+  </div>
+
+</div>
+
+<script>
+function toggleMenu() {
+  document.getElementById("menu").classList.toggle("show");
+}
+</script>
+
+</body>
+</html>
